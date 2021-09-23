@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/img/gauges">
+        <file>resources/images/gauges/clibase.png</file>
+        <file>resources/images/gauges/clicenter.png</file>
+        <file>resources/images/gauges/cliscale.png</file>
+        <file>resources/images/gauges/compass.png</file>
+        <file>resources/images/gauges/compassbase.png</file>
+        <file>resources/images/gauges/speed.png</file>
+        <file>resources/images/gauges/speedneddle.png</file>
+        <file>resources/images/gauges/windbase.png</file>
+        <file>resources/images/gauges/windR.png</file>
+    </qresource>
+    <qresource prefix="/img">
+        <file>resources/images/b.png</file>
+        <file>resources/images/bp.png</file>
+        <file>resources/images/compass.png</file>
+        <file>resources/images/mapborder.png</file>
+        <file>resources/images/pause.png</file>
+        <file>resources/images/play.png</file>
+        <file>resources/images/staple.png</file>
+        <file>resources/images/desenho-2.ktx</file>
+        <file>resources/images/desenho-2.png</file>
+    </qresource>
+    <qresource prefix="/img/icons">
+        <file>resources/images/icons/grow.png</file>
+        <file>resources/images/icons/icon1.png</file>
+        <file>resources/images/icons/icon1s.png</file>
+        <file>resources/images/icons/icon2.png</file>
+        <file>resources/images/icons/icon2s.png</file>
+        <file>resources/images/icons/icon3.png</file>
+        <file>resources/images/icons/icon3s.png</file>
+        <file>resources/images/icons/icon4.png</file>
+        <file>resources/images/icons/icon4s.png</file>
+        <file>resources/images/icons/icon5.png</file>
+        <file>resources/images/icons/icon5s.png</file>
+        <file>resources/images/icons/none.png</file>
+        <file>resources/images/icons/off.png</file>
+        <file>resources/images/icons/on.png</file>
+        <file>resources/images/icons/zminus.png</file>
+        <file>resources/images/icons/zplus.png</file>
+        <file>resources/images/icons/zminus-disabled.png</file>
+        <file>resources/images/icons/zplus-disabled.png</file>
+        <file>resources/images/icons/icon6s.png</file>
+        <file>resources/images/icons/icon6.png</file>
+    </qresource>
+</RCC>

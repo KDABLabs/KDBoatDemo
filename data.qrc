@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/BoatSailingContents.qml</file>
+        <file>resources/BoatStatusContents.qml</file>
+        <file>resources/Clino.qml</file>
+        <file>resources/Compass.qml</file>
+        <file>resources/Main.qml</file>
+        <file>resources/Icon.qml</file>
+        <file>resources/Map.qml</file>
+        <file>resources/Maparea.qml</file>
+        <file>resources/Mask.qml</file>
+        <file>resources/PlayData.qml</file>
+        <file>resources/PlayItem.qml</file>
+        <file>resources/Radio.qml</file>
+        <file>resources/Speeds.qml</file>
+        <file>resources/Textgauge.qml</file>
+        <file>resources/TextgaugeSmall.qml</file>
+        <file>resources/Wind.qml</file>
+        <file>resources/Background.qml</file>
+        <file>resources/AppMenu.qml</file>
+        <file>resources/AppPage.qml</file>
+        <file>resources/PageNavigation.qml</file>
+        <file>resources/BoatStatusContentsSmall.qml</file>
+        <file>resources/BoatSailingContentsSmall.qml</file>
+        <file>resources/AboutItem.qml</file>
+    </qresource>
+    <qresource prefix="/albumcovers">
+        <file>resources/albumcover/1200.png</file>
+        <file>resources/albumcover/1201.png</file>
+        <file>resources/albumcover/1202.png</file>
+        <file>resources/albumcover/1203.png</file>
+        <file>resources/albumcover/1204.png</file>
+        <file>resources/albumcover/1205.png</file>
+        <file>resources/albumcover/1206.png</file>
+        <file>resources/albumcover/1207.png</file>
+        <file>resources/albumcover/1208.png</file>
+        <file>resources/albumcover/1209.png</file>
+        <file>resources/albumcover/noimage.png</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>resources/fonts/Lato-Light.ttf</file>
+        <file>resources/fonts/Lato-Regular.ttf</file>
+        <file>resources/fonts/OpenSans-Light.ttf</file>
+    </qresource>
+</RCC>

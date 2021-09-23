@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/img/maps">
+        <file>resources/images/maps/shot19.png</file>
+        <file>resources/images/maps/shot20.png</file>
+        <file>resources/images/maps/shot21.png</file>
+        <file>resources/images/maps/shot22.png</file>
+        <file>resources/images/maps/shot19.ktx</file>
+        <file>resources/images/maps/shot20.ktx</file>
+        <file>resources/images/maps/shot21.ktx</file>
+        <file>resources/images/maps/shot22.ktx</file>
+    </qresource>
+</RCC>

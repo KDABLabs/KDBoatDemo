@@ -1,0 +1,3 @@
+[codespell]
+skip = ./build-*,.git,*.svg
+interactive = 3

@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: KDAB Boat Demo
+Upstream-Contact:  <info@kdab.com>
+Source: https://www.github.com/KDAB/KDBoatDemo
+
+Files: *.qrc
+Copyright: 2013-2021 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+License: AGPL-3.0-only
+
+Files: resources/images/* *.svg
+Copyright: 2013-2021 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+License: AGPL-3.0-only
+
+Files: resources/albumcover/*
+Copyright: 2021 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+License: AGPL-3.0-only
+
+Files: resources/fonts/Lato* resources/fonts/OpenSans*
+Copyright: google
+License: OFL-1.1

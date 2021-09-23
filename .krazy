@@ -1,0 +1,8 @@
+CHECKSETS c++
+
+#KDAB-specific checks
+EXTRA kdabcopyright-reuse,fosslicense-reuse,kdabcontactus
+
+#if you have a build subdir, skip it
+SKIP /build-
+
