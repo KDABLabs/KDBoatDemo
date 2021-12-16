@@ -16,9 +16,7 @@ Stay up-to-date with KDAB product announcements:
 Licensing
 =========
 KDBoatDemo is (C) 2013-2021, Klarälvdalens Datakonsult AB, and is available under the
-terms of the GNU AFFERO GENERAL PUBLIC LICENSE.  Please read the
-[LICENSES/AGPL-3.0-only.txt](https://github.com/KDAB/KDBoatDemo/blob/master/LICENSES/AGPL-3.0-only.txt)
-file in this repository.
+terms of the [MIT](https://github.com/KDAB/KDBindings/blob/main/LICENSES/MIT.txt) license.
 
 This project also includes some [Google Fonts](https://fonts.google.com/) which are available
 under the [SIL Open Font License](https://github.com/KDAB/KDBoatDemo/blob/master/LICENSES/OFC-1.1.txt)

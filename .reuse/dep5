@@ -5,16 +5,16 @@ Source: https://www.github.com/KDAB/KDBoatDemo
 
 Files: *.qrc
 Copyright: 2013-2021 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
-License: AGPL-3.0-only
+License: MIT
 
 Files: resources/images/* *.svg
 Copyright: 2013-2021 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
-License: AGPL-3.0-only
+License: MIT
 
 Files: resources/albumcover/*
 Copyright: 2021 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
-License: AGPL-3.0-only
+License: MIT
 
 Files: resources/fonts/Lato* resources/fonts/OpenSans*
 Copyright: google
-License: OFL-1.1
+License: OFL-1.1 OR Apache-2.0
