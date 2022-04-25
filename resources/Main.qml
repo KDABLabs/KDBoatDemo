@@ -36,120 +36,124 @@ ApplicationWindow {
     }
 
     Item {
-        anchors.centerIn: base.contentItem
-        width: _portrait ? base.height : base.width
-        height: _portrait ? base.width : base.height
-        rotation: _portrait ? 90 : 0
+        anchors.fill: parent
 
-        Background {
-            anchors.fill: parent
-            rotateCompass: menuArea.expanded
-        }
+        Item {
+            anchors.centerIn: parent
+            width: _portrait ? parent.height : parent.width
+            height: _portrait ? parent.width : parent.height
+            rotation: _portrait ? 90 : 0
 
-        AppPage {
-            id: pagesArea
-            width:  parent.width*1.4
-            height: parent.height
-            widthOffset: width - parent.width + 80
-            x: menuArea.expanded ? parent.width : 80
-            title: menuArea.currentItemText
-
-            SwipeView {
+            Background {
                 anchors.fill: parent
-                anchors.rightMargin: pagesArea.widthOffset
-                interactive: false
-                currentIndex: menuArea.currentIndex
-                clip: true
+                rotateCompass: menuArea.expanded
+            }
 
-                Loader {
-                    clip: true
-                    visible: SwipeView.isCurrentItem
-                    sourceComponent: _isLowRes ? smallBoatStatus : normalBoatStatus
-                    Component {
-                        id: normalBoatStatus
-                        BoatStatusContents { }
-                    }
-                    Component {
-                        id: smallBoatStatus
-                        BoatStatusContentsSmall { }
-                    }
-                }
+            AppPage {
+                id: pagesArea
+                width:  parent.width*1.4
+                height: parent.height
+                widthOffset: width - parent.width + 80
+                x: menuArea.expanded ? parent.width : 80
+                title: menuArea.currentItemText
 
-                Loader {
+                SwipeView {
+                    anchors.fill: parent
+                    anchors.rightMargin: pagesArea.widthOffset
+                    interactive: false
+                    currentIndex: menuArea.currentIndex
                     clip: true
-                    visible: SwipeView.isCurrentItem
-                    sourceComponent: _isLowRes ? smallBoatSailing : normalBoatSailing
-                    Component {
-                        id: normalBoatSailing
-                        BoatSailingContents { }
-                    }
-                    Component {
-                        id: smallBoatSailing
-                        BoatSailingContentsSmall { }
-                    }
-                }
 
-                PageNavigation {
-                    visible: SwipeView.isCurrentItem
-                    clip: true
-                }
-                Radio {
-                    visible: SwipeView.isCurrentItem
-                    clip: true
-                }
-                PlayItem {
-                    visible: SwipeView.isCurrentItem
-                    clip: true
-                }
+                    Loader {
+                        clip: true
+                        visible: SwipeView.isCurrentItem
+                        sourceComponent: _isLowRes ? smallBoatStatus : normalBoatStatus
+                        Component {
+                            id: normalBoatStatus
+                            BoatStatusContents { }
+                        }
+                        Component {
+                            id: smallBoatStatus
+                            BoatStatusContentsSmall { }
+                        }
+                    }
 
-                AboutItem {
-                    id: aboutItem
-                    visible: SwipeView.isCurrentItem
+                    Loader {
+                        clip: true
+                        visible: SwipeView.isCurrentItem
+                        sourceComponent: _isLowRes ? smallBoatSailing : normalBoatSailing
+                        Component {
+                            id: normalBoatSailing
+                            BoatSailingContents { }
+                        }
+                        Component {
+                            id: smallBoatSailing
+                            BoatSailingContentsSmall { }
+                        }
+                    }
+
+                    PageNavigation {
+                        visible: SwipeView.isCurrentItem
+                        clip: true
+                    }
+                    Radio {
+                        visible: SwipeView.isCurrentItem
+                        clip: true
+                    }
+                    PlayItem {
+                        visible: SwipeView.isCurrentItem
+                        clip: true
+                    }
+
+                    AboutItem {
+                        id: aboutItem
+                        visible: SwipeView.isCurrentItem
+                    }
                 }
             }
-        }
 
-        AppMenu {
-            id: menuArea
-            height: parent.height
+            AppMenu {
+                id: menuArea
+                height: parent.height
 
-            model: ListModel {
-                ListElement {
-                    name: qsTr("Boat Status")
-                    iconText: "icon1"
-                }
-                ListElement {
-                    name: qsTr("Sailing")
-                    iconText: "icon2"
-                }
-                ListElement {
-                    name: qsTr("Navigation")
-                    iconText: "icon5"
-                }
-                ListElement {
-                    name: qsTr("Com. Radio")
-                    iconText: "icon3"
-                }
-                ListElement {
-                    name: qsTr("Music Player")
-                    iconText: "icon4"
-                }
-                ListElement {
-                    name: qsTr("About KDAB")
-                    iconText: "icon6"
+                model: ListModel {
+                    ListElement {
+                        name: qsTr("Boat Status")
+                        iconText: "icon1"
+                    }
+                    ListElement {
+                        name: qsTr("Sailing")
+                        iconText: "icon2"
+                    }
+                    ListElement {
+                        name: qsTr("Navigation")
+                        iconText: "icon5"
+                    }
+                    ListElement {
+                        name: qsTr("Com. Radio")
+                        iconText: "icon3"
+                    }
+                    ListElement {
+                        name: qsTr("Music Player")
+                        iconText: "icon4"
+                    }
+                    ListElement {
+                        name: qsTr("About KDAB")
+                        iconText: "icon6"
+                    }
                 }
             }
-        }
 
-        MouseArea {
-            onClicked: Qt.quit()
-            enabled: canCloseDemoFromUI
-            anchors.right: parent.right
-            anchors.top: parent.top
-            width: 50
-            height: 50
-        }
+            MouseArea {
+                onClicked: Qt.quit()
+                enabled: canCloseDemoFromUI
+                anchors.right: parent.right
+                anchors.top: parent.top
+                width: 50
+                height: 50
+            }
 
+        }
     }
 }
 

@@ -9,16 +9,36 @@
 
 project(KDABBoatDemo)
 cmake_minimum_required(VERSION 3.9)
-find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Gui Quick)
+
+find_package(Qt6 6.3.0 COMPONENTS Core Quick Core5Compat REQUIRED)
+
+set(QT_WASM_INITIAL_MEMORY "64MB")
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC TRUE)
 set(CMAKE_AUTORCC TRUE)
 
-add_executable(KDABBoatDemo
+set(PROJECT_SOURCES
   main.cpp
   imagesMaps.qrc
   imagesMaps2.qrc
   images.qrc
   data.qrc
 )
-target_link_libraries(KDABBoatDemo Qt5::Core Qt5::Gui Qt5::Quick)
+
+qt_add_executable(KDABBoatDemo
+    MANUAL_FINALIZATION
+    ${PROJECT_SOURCES}
+)
+
+target_compile_definitions(KDABBoatDemo
+  PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
+target_link_libraries(KDABBoatDemo
+  PRIVATE
+    Qt${QT_VERSION_MAJOR}::Core
+    Qt${QT_VERSION_MAJOR}::Gui
+    Qt${QT_VERSION_MAJOR}::Quick
+    Qt${QT_VERSION_MAJOR}::Core5Compat
+)
+qt_import_qml_plugins(KDABBoatDemo)
+qt_finalize_executable(KDABBoatDemo)

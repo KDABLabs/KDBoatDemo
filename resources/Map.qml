@@ -21,7 +21,7 @@ Flickable {
     flickDeceleration: 350
     Image {
         id: image
-        source: "/img/maps/resources/images/maps/shot"+map.numberi
+        source: "/img/maps/resources/images/maps/shot" + map.numberi + (Qt.platform.os === "wasm" ? ".png" : "")
         anchors.centerIn: parent
     }
 }
