@@ -2,6 +2,8 @@ KD Boat UI Demo
 ===============
 KDAB Nautical UI - concept of the next generation UI for sailing boats
 
+Try KD Boat Demo in your web browser! visit https://demos.kdab.com/wasm/kdboatdemo/
+
 Contact
 =======
 * Visit us on GitHub: https://github.com/KDAB/KDBoatDemo
