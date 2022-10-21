@@ -21,4 +21,7 @@ add_executable(KDABBoatDemo
   images.qrc
   data.qrc
 )
+
 target_link_libraries(KDABBoatDemo Qt5::Core Qt5::Gui Qt5::Quick)
+
+install(TARGETS KDABBoatDemo RUNTIME DESTINATION bin)
