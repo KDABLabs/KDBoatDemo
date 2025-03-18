@@ -9,7 +9,7 @@
 
 project(KDABBoatDemo)
 cmake_minimum_required(VERSION 3.9)
-find_package(Qt5 CONFIG REQUIRED COMPONENTS Core Gui Quick)
+find_package(Qt6 CONFIG REQUIRED COMPONENTS Core Gui Quick)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC TRUE)
 set(CMAKE_AUTORCC TRUE)
@@ -22,6 +22,6 @@ add_executable(KDABBoatDemo
   data.qrc
 )
 
-target_link_libraries(KDABBoatDemo Qt5::Core Qt5::Gui Qt5::Quick)
+target_link_libraries(KDABBoatDemo Qt6::Core Qt6::Gui Qt6::Quick)
 
 install(TARGETS KDABBoatDemo RUNTIME DESTINATION bin)

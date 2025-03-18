@@ -9,7 +9,7 @@
 */
 
 import QtQuick 2.0
-import QtGraphicalEffects 1.0 // for OpacityMask
+import Qt5Compat.GraphicalEffects 6.0 // for OpacityMask
 
 Item {
     id: mask
