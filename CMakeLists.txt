@@ -6,7 +6,7 @@
 #
 # Contact info@kdab.com for more information about this software.
 #
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.16)
 
 project(KDABBoatDemo)
 find_package(Qt6 CONFIG REQUIRED COMPONENTS Core Gui Quick)
