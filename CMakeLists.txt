@@ -16,6 +16,8 @@ set(CMAKE_AUTORCC TRUE)
 
 add_executable(KDABBoatDemo
   main.cpp
+  windowcontroller.cpp
+  musicmodel.cpp
   imagesMaps.qrc
   imagesMaps2.qrc
   images.qrc

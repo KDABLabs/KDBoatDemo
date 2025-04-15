@@ -9,7 +9,6 @@
         <file>resources/Map.qml</file>
         <file>resources/Maparea.qml</file>
         <file>resources/Mask.qml</file>
-        <file>resources/PlayData.qml</file>
         <file>resources/PlayItem.qml</file>
         <file>resources/Radio.qml</file>
         <file>resources/Speeds.qml</file>

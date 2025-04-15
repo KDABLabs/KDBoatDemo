@@ -10,6 +10,7 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
+import com.kdab.boat 1.0
 
 Item {
     id: playItem
@@ -45,7 +46,7 @@ Item {
                 snapMode: ListView.SnapToItem
                 highlightFollowsCurrentItem : true
                 delegate: playDelegate
-                model: PlayData {
+                model: MusicModel {
                     id: playdata
                 }
 

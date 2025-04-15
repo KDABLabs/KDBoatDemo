@@ -16,6 +16,9 @@
 #include <QCommandLineParser>
 #include <QScreen>
 
+#include "windowcontroller.h"
+#include "musicmodel.h"
+
 /**
  * KDAB Boat demo
  */
@@ -82,6 +85,8 @@ int main(int argc, char *argv[])
     }();
     engine.rootContext()->setContextProperty("_portrait", QVariant::fromValue(portrait));
 
+    WindowController::instance().setPortrait(portrait);
+
     const bool isLowRes = [&]() {
         if (parser.isSet(lowresOption))
             return true;
@@ -89,14 +94,10 @@ int main(int argc, char *argv[])
         return primaryGeometry.width() < 1280 || primaryGeometry.height() < 720;
     }();
     engine.rootContext()->setContextProperty("_isLowRes", QVariant::fromValue(isLowRes));
+    WindowController::instance().setLowRes(isLowRes);
 
-    if (isLowRes) {
-        engine.rootContext()->setContextProperty("_windowWidth", QVariant::fromValue(portrait ? 480 : 800));
-        engine.rootContext()->setContextProperty("_windowHeight", QVariant::fromValue(portrait ? 800 : 480));
-    } else {
-        engine.rootContext()->setContextProperty("_windowWidth", QVariant::fromValue(portrait ? 720 : 1280));
-        engine.rootContext()->setContextProperty("_windowHeight", QVariant::fromValue(portrait ? 1280 : 720));
-    }
+    qmlRegisterType<MusicModel>("com.kdab.boat", 1, 0, "MusicModel");
+    qmlRegisterSingletonInstance<WindowController>("com.kdab.boat", 1, 0, "WindowData", &WindowController::instance());
 
     const QUrl url(QStringLiteral("qrc:/resources/Main.qml"));
     QObject::connect(
