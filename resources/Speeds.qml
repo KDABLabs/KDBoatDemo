@@ -68,8 +68,12 @@ Item {
 
             Text {
                 color: "#ffffff"
-                property string temp1: ((scaleImage.rotation-310)/saclefactor).toFixed(1)    // one decimal
-                text: temp1+unit
+
+                function calculate(rotation, scaleFactor) {
+                    return ((rotation-310)/scaleFactor).toFixed(1) // one decimal
+                }
+
+                text: calculate(scaleImage.rotation, saclefactor) + unit
                 font.family: openThin.name
                 font.pixelSize: 20
                 y: 85
